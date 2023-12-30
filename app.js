@@ -9,7 +9,7 @@ app.use(cors());
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
-const MONGO_URI = `mongodb+srv://tanzimnahid6:ztMxsHPYo5WXhae2@cluster0.bezdwcv.mongodb.net/authApp?retryWrites=true&w=majority`;
+const MONGO_URI = `mongodb+srv://${process.env.MONGO_USER}:ztMxsHPYo5WXhae2@cluster0.bezdwcv.mongodb.net/authApp?retryWrites=true&w=majority`;
 //connect mongodb through mongoose======start
 mongoose
   .connect(MONGO_URI)
